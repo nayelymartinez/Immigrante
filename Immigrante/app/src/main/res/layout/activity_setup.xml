@@ -16,10 +16,17 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/email_login_form"
+            android:id="@+id/setup_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prompt_language"
+                android:layout_marginBottom="10dp" />
 
             <Spinner
                 android:id="@+id/spinner_language"
@@ -28,33 +35,46 @@
                 android:entries="@array/language_array"
                 android:prompt="@string/prompt_language" />
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/emergency_contact_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <EditText
-                    android:id="@+id/password"
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/setup_welcome"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_primary_emergency_name"
+                        android:imeActionId="@+id/login"
+                        android:imeOptions="actionUnspecified"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/setup_begin_button"
+                    style="?android:textAppearanceSmall"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/prompt_password"
-                    android:imeActionId="@+id/login"
-                    android:imeActionLabel="@string/action_sign_in_short"
-                    android:imeOptions="actionUnspecified"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:singleLine="true" />
+                    android:layout_marginTop="16dp"
+                    android:text="@string/action_begin"
+                    android:textStyle="bold" />
 
-            </android.support.design.widget.TextInputLayout>
-
-            <Button
-                android:id="@+id/email_sign_in_button"
-                style="?android:textAppearanceSmall"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="@string/action_sign_in"
-                android:textStyle="bold" />
-
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -9,9 +9,10 @@
 
     <!-- Strings related to login -->
     <string name="prompt_language">Choose your language:</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="setup_welcome">Bienvenido a Immigrante. Esta aplicacion avisa a tus contactos via texto en caso de emergencia.</string>
+    <string name="action_begin">Empesar</string>
+    <string name="action_continue">Continue</string>
+    <string name="prompt_primary_emergency_name">Nombre de contacto emergencia</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
     <string name="error_incorrect_password">This password is incorrect</string>
